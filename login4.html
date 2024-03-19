@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Usuario</title>
+    <style>
+        body {
+            background-image: url('log.avif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .image-container img {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 35px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .login-container button {
+            width: 100%;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .email-container {
+            margin-left: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="moto.png" alt="Motorcycle">
+        </div>
+
+        <div class="login-container">
+            <h2>Iniciar sesión</h2>
+            <form action="login123.php" method="post">
+                <input type="nombre" name="nombre" placeholder="nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <button class="login-container button" onclick="irARegistro()">Registrarse</button>
+        </div>
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            // Aquí puedes agregar la lógica de inicio de sesión con JavaScript
+            alert("Iniciando sesión...");
+        }
+
+        function irARegistro() {
+            // Redireccionar a la página de registro
+            window.location.href = "Registro.html";
+        }
+    </script>
+
+</body>
+
+</html>
+

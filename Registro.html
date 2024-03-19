@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <style>
+        body {
+            background-image: url('log.avif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid rgb(0, 55, 128);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgb(0, 55, 128);
+            border-radius: 5px;
+            background-color: #ffffff; /* Cambio de color de fondo a blanco  */
+            color: #000000; /* Cambio de color del texto a negro  */
+        }
+        input[type="password"] {
+            width: 85%; /* Ancho del campo de contraseña */
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgb(0, 55, 128);
+            border-radius: 5px;
+            background-color: #ffffff; /* Cambio de color de fondo a blanco  */
+            color: #000000; /* Cambio de color del texto a negro /
+        }
+        .password-toggle {
+            width: 10%; /* Ancho del icono de visualización de la contraseña */
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgb(0, 55, 128);
+            border-radius: 5px;
+            background-color: #ffffff; /* Cambio de color de fondo a blanco  */
+            color: #000000; /* Cambio de color del texto a negro  */
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: rgb(0, 55, 128);
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(0, 55, 128);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2> 
+        <form action="registro9.php" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required><br>
+            <input type="email" name="email" placeholder="Correo electrónico" required><br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <span class="password-toggle" onclick="togglePassword()">👁️</span> <!-- Agregado el icono de visualización de contraseña -->
+            <br>
+            <input type="submit" value="Registrarse">
+        </form>
+        <form action="login4.html">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
